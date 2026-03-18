@@ -10324,20 +10324,6 @@
                               "x": 0.4933862433862434,
                               "y": 0.4608938547486033,
                               "uniqueID": "id-97950",
-                              "ioValues": [
-                                {
-                                  "name": "angle",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                },
-                                {
-                                  "name": "height",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                },
-                                {
-                                  "name": "thickness",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                }
-                              ],
                               "codeVersion": 1,
                               "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                             },
@@ -12074,20 +12060,6 @@
                               "x": 0.4933862433862434,
                               "y": 0.4608938547486033,
                               "uniqueID": "id-98028",
-                              "ioValues": [
-                                {
-                                  "name": "angle",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                },
-                                {
-                                  "name": "height",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                },
-                                {
-                                  "name": "thickness",
-                                  "ioValue": "__GEOMETRY_INPUT__"
-                                }
-                              ],
                               "codeVersion": 1,
                               "code": " \n      //Inputs:[angle, height, thickness]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n    \n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n      let angleRad = angle * Math.PI / 180;\n      let base = 2 * height * Math.tan(angleRad / 2);\n\n      const triangle = replicad.draw([-base/2, 0])\n              .lineTo([base/2, 0])\n              .lineTo([0, height])\n              .close()\n              .sketchOnPlane()\n              .extrude(thickness)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [triangle], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      return shape2\n \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
                             },
@@ -30258,10 +30230,6 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
-                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -44847,10 +44815,6 @@
                         {
                           "name": "radius",
                           "ioValue": 20
-                        },
-                        {
-                          "name": "inputShape",
-                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -44865,10 +44829,6 @@
                         {
                           "name": "radius",
                           "ioValue": 2
-                        },
-                        {
-                          "name": "inputShape",
-                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -46856,10 +46816,6 @@
                             {
                               "name": "Angle",
                               "ioValue": 120
-                            },
-                            {
-                              "name": "Shape",
-                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -47118,8 +47074,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.0873015873015873,
-          "y": 0.6601671309192201,
+          "x": 0.08409250175192712,
+          "y": 0.6567164179104478,
           "uniqueID": "id-117751",
           "name": "Motor Mount",
           "ioValues": [
@@ -47251,8 +47207,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.3326719576719577,
-              "y": 0.775,
+              "x": 0.34407848633496846,
+              "y": 0.5850746268656717,
               "uniqueID": "id-151767",
               "ioValues": [
                 {
@@ -47267,8 +47223,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.5720899470899471,
-              "y": 0.6833333333333333,
+              "x": 0.5774351786965662,
+              "y": 0.5432835820895523,
               "uniqueID": "id-151771",
               "ioValues": [
                 {
@@ -47291,8 +47247,8 @@
             },
             {
               "atomType": "Difference",
-              "x": 0.6818783068783069,
-              "y": 0.4972222222222222,
+              "x": 0.7014716187806587,
+              "y": 0.49552238805970156,
               "uniqueID": "id-151777",
               "ioValues": [
                 {
@@ -47307,8 +47263,8 @@
             },
             {
               "atomType": "ExtractTag",
-              "x": 0.7566137566137566,
-              "y": 0.7103064066852367,
+              "x": 0.759635599159075,
+              "y": 0.7134328358208956,
               "uniqueID": "id-151781",
               "name": "Extract Tag",
               "ioValues": [
@@ -47322,8 +47278,8 @@
             },
             {
               "atomType": "Gcode",
-              "x": 0.9087301587301588,
-              "y": 0.7186629526462396,
+              "x": 0.9032936229852839,
+              "y": 0.7611940298507462,
               "uniqueID": "id-162586",
               "ioValues": [
                 {
@@ -47423,8 +47379,8 @@
             },
             {
               "atomType": "Rotate",
-              "x": 0.8313492063492063,
-              "y": 0.7158774373259054,
+              "x": 0.8423265592151367,
+              "y": 0.7164179104477613,
               "uniqueID": "id-183977",
               "ioValues": [
                 {
@@ -47496,10 +47452,6 @@
                     {
                       "name": "scaleFactor",
                       "ioValue": 65
-                    },
-                    {
-                      "name": "inputShape",
-                      "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ],
                   "codeVersion": 1,
@@ -50972,10 +50924,6 @@
                                 {
                                   "name": "radius",
                                   "ioValue": 4
-                                },
-                                {
-                                  "name": "inputShape",
-                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -52308,6 +52256,41 @@
                 }
               ],
               "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Gcode",
+              "x": 0.6510161177295024,
+              "y": 0.835820895522388,
+              "uniqueID": "id-194011",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Tool Size",
+                  "ioValue": 6.35
+                },
+                {
+                  "name": "Passes",
+                  "ioValue": 1
+                },
+                {
+                  "name": "Speed",
+                  "ioValue": 1500
+                },
+                {
+                  "name": "Cut Through",
+                  "ioValue": 0
+                },
+                {
+                  "name": "Part Name",
+                  "ioValue": "Motor Mount",
+                  "currentEquation": "Motor Mount"
+                }
+              ],
+              "partName": "Motor Mount",
+              "sortDirection": "Left"
             }
           ],
           "allConnectors": [
@@ -52355,6 +52338,11 @@
               "ap2Name": "geometry",
               "ap1ID": "id-151739",
               "ap2ID": "id-151771"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-151739",
+              "ap2ID": "id-194011"
             },
             {
               "ap2Name": "geometry",
@@ -52565,10 +52553,6 @@
                         {
                           "name": "Dist",
                           "ioValue": 152
-                        },
-                        {
-                          "name": "Shape",
-                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -53498,10 +53482,6 @@
                         {
                           "name": "Dist",
                           "ioValue": 1219.1999999999998
-                        },
-                        {
-                          "name": "Shape",
-                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -63946,10 +63926,6 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
-                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -65859,10 +65835,6 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
-                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -66267,10 +66239,6 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
-                                },
-                                {
-                                  "name": "Shape",
-                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
