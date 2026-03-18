@@ -47108,8 +47108,8 @@
             },
             {
               "atomType": "Assembly",
-              "x": 0.5661375661375662,
-              "y": 0.26944444444444443,
+              "x": 0.5669236159775753,
+              "y": 0.21791044776119403,
               "uniqueID": "id-127814",
               "ioValues": [
                 {
@@ -47247,8 +47247,8 @@
             },
             {
               "atomType": "Difference",
-              "x": 0.7014716187806587,
-              "y": 0.49552238805970156,
+              "x": 0.6601261387526279,
+              "y": 0.43582089552238806,
               "uniqueID": "id-151777",
               "ioValues": [
                 {
@@ -47263,8 +47263,8 @@
             },
             {
               "atomType": "ExtractTag",
-              "x": 0.759635599159075,
-              "y": 0.7134328358208956,
+              "x": 0.7855641205325858,
+              "y": 0.4537313432835821,
               "uniqueID": "id-151781",
               "name": "Extract Tag",
               "ioValues": [
@@ -47278,8 +47278,8 @@
             },
             {
               "atomType": "Gcode",
-              "x": 0.9032936229852839,
-              "y": 0.7611940298507462,
+              "x": 0.8976874562018221,
+              "y": 0.7820895522388059,
               "uniqueID": "id-162586",
               "ioValues": [
                 {
@@ -47379,8 +47379,8 @@
             },
             {
               "atomType": "Rotate",
-              "x": 0.8423265592151367,
-              "y": 0.7164179104477613,
+              "x": 0.7231955150665732,
+              "y": 0.5402985074626866,
               "uniqueID": "id-183977",
               "ioValues": [
                 {
@@ -52259,8 +52259,8 @@
             },
             {
               "atomType": "Gcode",
-              "x": 0.6510161177295024,
-              "y": 0.835820895522388,
+              "x": 0.6615276804484934,
+              "y": 0.8477611940298507,
               "uniqueID": "id-194011",
               "ioValues": [
                 {
@@ -52291,6 +52291,77 @@
               ],
               "partName": "Motor Mount",
               "sortDirection": "Left"
+            },
+            {
+              "atomType": "Gcode",
+              "x": 0.7042747021723896,
+              "y": 0.2447761194029851,
+              "uniqueID": "id-194018",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Tool Size",
+                  "ioValue": 6.35
+                },
+                {
+                  "name": "Passes",
+                  "ioValue": 1
+                },
+                {
+                  "name": "Speed",
+                  "ioValue": 1500
+                },
+                {
+                  "name": "Cut Through",
+                  "ioValue": 0
+                },
+                {
+                  "name": "Part Name",
+                  "ioValue": "Motor Mount",
+                  "currentEquation": "Motor Mount"
+                }
+              ],
+              "partName": "Motor Mount",
+              "sortDirection": "Left"
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.8037841625788367,
+              "y": 0.8238805970149253,
+              "uniqueID": "id-194025",
+              "ioValues": [
+                {
+                  "name": "Shape 1",
+                  "ioValue": null
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.7238962859145059,
+              "y": 0.7492537313432837,
+              "uniqueID": "id-194029",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 600
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
             }
           ],
           "allConnectors": [
@@ -52298,6 +52369,11 @@
               "ap2Name": "geometry1",
               "ap1ID": "id-127814",
               "ap2ID": "id-151777"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-127814",
+              "ap2ID": "id-194018"
             },
             {
               "ap2Name": "Width",
@@ -52383,6 +52459,16 @@
               "ap2Name": "geometry",
               "ap1ID": "id-183977",
               "ap2ID": "id-162586"
+            },
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-183977",
+              "ap2ID": "id-194025"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-183977",
+              "ap2ID": "id-194029"
             },
             {
               "ap2Name": "geometry",
