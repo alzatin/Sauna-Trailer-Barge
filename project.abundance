@@ -47278,8 +47278,8 @@
             },
             {
               "atomType": "Gcode",
-              "x": 0.8976874562018221,
-              "y": 0.7820895522388059,
+              "x": 0.8878766643307637,
+              "y": 0.7014925373134329,
               "uniqueID": "id-162586",
               "ioValues": [
                 {
@@ -52336,6 +52336,10 @@
                 {
                   "name": "Shape 1",
                   "ioValue": null
+                },
+                {
+                  "name": "Shape 2",
+                  "ioValue": null
                 }
               ]
             },
@@ -52351,11 +52355,12 @@
                 },
                 {
                   "name": "xDist",
-                  "ioValue": 600
+                  "ioValue": 0
                 },
                 {
                   "name": "yDist",
-                  "ioValue": 0
+                  "ioValue": 1000,
+                  "currentEquation": "1000"
                 },
                 {
                   "name": "zDist",
@@ -52456,11 +52461,6 @@
               "ap2ID": "id-162637"
             },
             {
-              "ap2Name": "geometry",
-              "ap1ID": "id-183977",
-              "ap2ID": "id-162586"
-            },
-            {
               "ap2Name": "Shape 1",
               "ap1ID": "id-183977",
               "ap2ID": "id-194025"
@@ -52484,6 +52484,16 @@
               "ap2Name": "geometry",
               "ap1ID": "id-127414",
               "ap2ID": "id-136616"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-194025",
+              "ap2ID": "id-162586"
+            },
+            {
+              "ap2Name": "Shape 2",
+              "ap1ID": "id-194029",
+              "ap2ID": "id-194025"
             }
           ],
           "fileTypeVersion": 1
