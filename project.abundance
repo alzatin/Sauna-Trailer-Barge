@@ -31434,6 +31434,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -46951,6 +46955,10 @@
                         {
                           "name": "radius",
                           "ioValue": 20
+                        },
+                        {
+                          "name": "inputShape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -46965,6 +46973,10 @@
                         {
                           "name": "radius",
                           "ioValue": 2
+                        },
+                        {
+                          "name": "inputShape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -49163,6 +49175,10 @@
                             {
                               "name": "Angle",
                               "ioValue": 120
+                            },
+                            {
+                              "name": "Shape",
+                              "ioValue": "__GEOMETRY_INPUT__"
                             }
                           ],
                           "codeVersion": 1,
@@ -49701,8 +49717,7 @@
                 },
                 {
                   "name": "Tool Size",
-                  "ioValue": 6.35,
-                  "currentEquation": "6.35"
+                  "ioValue": 6.35
                 },
                 {
                   "name": "Passes",
@@ -49724,6 +49739,65 @@
               ],
               "partName": "Motor Mount",
               "sortDirection": "Left"
+            },
+            {
+              "atomType": "Gcode",
+              "x": 0.8111587982832618,
+              "y": 0.7018072289156627,
+              "uniqueID": "id-204110",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Tool Size",
+                  "ioValue": 4
+                },
+                {
+                  "name": "Passes",
+                  "ioValue": 1
+                },
+                {
+                  "name": "Speed",
+                  "ioValue": 1500
+                },
+                {
+                  "name": "Cut Through",
+                  "ioValue": 0
+                },
+                {
+                  "name": "Part Name",
+                  "ioValue": "Motor Mount",
+                  "currentEquation": "Motor Mount"
+                }
+              ],
+              "partName": "Motor Mount",
+              "sortDirection": "Left"
+            },
+            {
+              "atomType": "Move",
+              "x": 0.7012875536480687,
+              "y": 0.8072289156626505,
+              "uniqueID": "id-204117",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 500
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
             },
             {
               "atomType": "GitHubMolecule",
@@ -49776,6 +49850,10 @@
                     {
                       "name": "scaleFactor",
                       "ioValue": 65
+                    },
+                    {
+                      "name": "inputShape",
+                      "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ],
                   "codeVersion": 1,
@@ -53248,6 +53326,10 @@
                                 {
                                   "name": "radius",
                                   "ioValue": 4
+                                },
+                                {
+                                  "name": "inputShape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -54580,67 +54662,6 @@
                 }
               ],
               "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Gcode",
-              "x": 0.8111587982832618,
-              "y": 0.7018072289156627,
-              "uniqueID": "id-204110",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Tool Size",
-                  "ioValue": 4,
-                  "currentEquation": "4"
-                },
-                {
-                  "name": "Passes",
-                  "ioValue": 1
-                },
-                {
-                  "name": "Speed",
-                  "ioValue": 1500
-                },
-                {
-                  "name": "Cut Through",
-                  "ioValue": 0
-                },
-                {
-                  "name": "Part Name",
-                  "ioValue": "Motor Mount",
-                  "currentEquation": "Motor Mount"
-                }
-              ],
-              "partName": "Motor Mount",
-              "sortDirection": "Left"
-            },
-            {
-              "atomType": "Move",
-              "x": 0.7012875536480687,
-              "y": 0.8072289156626505,
-              "uniqueID": "id-204117",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 500,
-                  "currentEquation": "500"
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
             }
           ],
           "allConnectors": [
@@ -54731,6 +54752,11 @@
             },
             {
               "ap2Name": "geometry",
+              "ap1ID": "id-204117",
+              "ap2ID": "id-204110"
+            },
+            {
+              "ap2Name": "geometry",
               "ap1ID": "id-162637",
               "ap2ID": "id-151767"
             },
@@ -54743,11 +54769,6 @@
               "ap2Name": "geometry",
               "ap1ID": "id-127414",
               "ap2ID": "id-136616"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-204117",
-              "ap2ID": "id-204110"
             }
           ],
           "fileTypeVersion": 1
@@ -54903,6 +54924,10 @@
                         {
                           "name": "Dist",
                           "ioValue": 152
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -55832,6 +55857,10 @@
                         {
                           "name": "Dist",
                           "ioValue": 1219.1999999999998
+                        },
+                        {
+                          "name": "Shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ],
                       "codeVersion": 1,
@@ -67362,6 +67391,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -69271,6 +69304,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
@@ -69675,6 +69712,10 @@
                                 {
                                   "name": "distZ",
                                   "ioValue": 0
+                                },
+                                {
+                                  "name": "Shape",
+                                  "ioValue": "__GEOMETRY_INPUT__"
                                 }
                               ],
                               "codeVersion": 1,
