@@ -26067,8 +26067,8 @@
         },
         {
           "atomType": "GitHubMolecule",
-          "x": 0.20037629350893696,
-          "y": 0.8945783132530121,
+          "x": 0.2,
+          "y": 0.9115853658536586,
           "uniqueID": "id-214810",
           "name": "Motor_Mounting_Bracket",
           "topLevel": false,
